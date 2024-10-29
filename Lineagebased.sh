@@ -3,7 +3,7 @@
 # Remove the local manifests directory if it exists (cleanup before repo initialization)
 rm -rf .repo/local_manifests/
 # Initialize ROM manifest
-repo init --depth=1 --no-repo-verify -u https://github.com/Los-Ext/manifest.git -b lineage-21.0 --git-lfs -g default,-mips,-darwin,-notdefault
+repo init -u https://github.com/ProjectMatrixx/android.git -b 14.0 --git-lfs
 # repo sync
 /opt/crave/resync.sh
 # cloning DT
@@ -20,6 +20,6 @@ git clone https://github.com/lineageEXTmojito/android_hardware_xiaomi.git --dept
 # set build environment
 . build/envsetup.sh
 # lunch
-lunch lineage_mojito-userdebug
+brunch mojito
 # bacon
-m bacon
+#m bacon
